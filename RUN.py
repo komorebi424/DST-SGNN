@@ -294,4 +294,4 @@ if __name__ == '__main__':
     test()
     end_time = time.time()  
     run_time = end_time - start_time  
-    print(f"代码推理时间：{run_time}秒")
+    print(f"Inference time of the code: {run_time} seconds")

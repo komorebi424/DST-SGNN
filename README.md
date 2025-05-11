@@ -1,4 +1,4 @@
-# Project Name
+# DST-SGNN
 
 ## Overview
 

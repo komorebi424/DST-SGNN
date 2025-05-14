@@ -1,5 +1,8 @@
 # DST-SGNN
 
+## Appendix
+The appendix of the paper can be accessed through [Appendix](https://github.com/komorebi424/DST-SGNN/blob/master/Appendix.pdf). This appendix contains several supplementary materials, such as detailed verification processes, experimental data, supplementary analyses, or other information that supports the main content of the paper but is not included in the main text for the sake of conciseness.
+
 ## Overview
 
 This project introduces **Dynamic Spatio-Temporal Stiefel Graph Neural Network (DST-SGNN)**, designed to efficiently forecast spatio-temporal time series (STTS) data. STTS are widely used in various applications, but their forecasting is challenging due to complex dependencies in both time and space dimensions.

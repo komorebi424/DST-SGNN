@@ -1,5 +1,7 @@
 # DST-SGNN
 
+The full paper and appendix are available at [Arxiv](https://arxiv.org/abs/2506.00798).
+
 ## Appendix
 The appendix of the paper can be accessed through [Appendix](https://github.com/komorebi424/DST-SGNN/blob/master/Appendix.pdf). This appendix contains several supplementary materials, such as detailed verification processes, experimental data, supplementary analyses, or other information that supports the main content of the paper but is not included in the main text due to space limitations. 
 

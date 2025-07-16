@@ -154,7 +154,7 @@ class SGSC(nn.Module):
                 self.b2[0]
         )
 
-        ob_real = torch.einsum('bik,bkp->bip', o2_real, P_real.transpose(2, 1))
+        ob_real = torch.einsum('bik,bkp->bip', P_real, o2_real)
 
 
         return ob_real
@@ -171,7 +171,6 @@ class SGSC(nn.Module):
 
         bias = x
         x1 = self.GC(x)
-        x1 = x1.permute(0, 2, 1)
         x1 = x1 + bias
 
         x1 = x1.permute(0, 2, 1)

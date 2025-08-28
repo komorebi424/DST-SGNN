@@ -9,7 +9,7 @@ The appendix of the paper can be accessed through [Appendix](https://github.com/
 
 This project introduces **Dynamic Spatio-Temporal Stiefel Graph Neural Network (DST-SGNN)**, designed to efficiently forecast spatio-temporal time series (STTS) data. STTS are widely used in various applications, but their forecasting is challenging due to complex dependencies in both time and space dimensions.
 
-*(Note: Files with `_L` in their names and the scripts `RUN_FEW.py` and `RUN_ZERO.py` are related to **LDSGNN**. Specifically, `RUN_FEW.py` and `RUN_ZERO.py` are used for few-shot and zero-shot experiments, and their usage is similar to **DST-SGNN**.)* 
+*(Note: Files with `_L` in their names and the scripts `RUN_FEW.py` and `RUN_ZERO.py` are related to **LAD-SGNN**. Specifically, `RUN_FEW.py` and `RUN_ZERO.py` are used for few-shot and zero-shot experiments, and their usage is similar to **DST-SGNN**.)* 
 
 ## Prerequisites
 - Python 3.10.14

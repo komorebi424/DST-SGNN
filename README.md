@@ -7,8 +7,25 @@ The appendix of the paper can be accessed through [Appendix](https://github.com/
 
 ## Overview
 
-This project introduces **Dynamic Spatio-Temporal Stiefel Graph Neural Network (DST-SGNN)**, designed to efficiently forecast spatio-temporal time series (STTS) data. STTS are widely used in various applications, but their forecasting is challenging due to complex dependencies in both time and space dimensions.
+DST-SGNN: Dynamic Spatio-Temporal Stiefel Graph Neural Network
 
+This project introduces the Dynamic Spatio-Temporal Stiefel Graph Neural Network (DST-SGNN), designed to efficiently forecast spatio-temporal time series (STTS) data. STTS appear in various applications, but forecasting them is challenging due to complex dependencies across both time and space.
+
+LAD-SGNN: LLM-Augmented Stiefel Graph Neural Networks
+
+LAD-SGNN is an LLM-enhanced version of DST-SGNN (IJCAI) for spatiotemporal forecasting. Building on Stiefel spectral graph convolution, LAD-SGNN incorporates large language model features to improve both structural and semantic modeling.
+
+Key improvements and highlights:
+
+Comprehensive review and context: Model design is informed by a thorough reorganization of spatiotemporal forecasting studies, including recent LLM-based approaches.
+
+LLM integration with structured prompts: A lightweight LLM framework is embedded with a spatio-temporal alignment mechanism, enabling unified structural and semantic modeling.
+
+Expanded experimental evaluation: Evaluated on zero-shot and few-shot forecasting across ten real-world datasets, supported by ablation and sensitivity analyses.
+
+This repository provides code and examples to replicate LAD-SGNN experiments and explore its LLM-augmented forecasting capabilities.
+
+This repository provides code and examples to replicate LAD-SGNN experiments and explore its LLM-augmented forecasting capabilities.
 *(Note: Files with `_L` in their names and the scripts `RUN_FEW.py` and `RUN_ZERO.py` are related to **LAD-SGNN**. Specifically, `RUN_FEW.py` and `RUN_ZERO.py` are used for few-shot and zero-shot experiments, and their usage is similar to **DST-SGNN**.)* 
 
 ## Prerequisites

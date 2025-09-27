@@ -15,11 +15,11 @@ LAD-SGNN enhances DST-SGNN by integrating a lightweight large language model wit
 
 **Key highlights**:
 
-**Model design incorporates a thorough reorganization of spatiotemporal forecasting studies, including recent LLM-based approaches.**
+1. Model design incorporates a thorough reorganization of spatiotemporal forecasting studies, including recent LLM-based approaches.
 
-**LLM integration with structured prompts.**
+2. LLM integration with structured prompts.
 
-**Supports zero-shot and few-shot forecasting.**
+3. Supports zero-shot and few-shot forecasting.
 
 *(Note: Files with `_L` in their names and the scripts `RUN_FEW.py` and `RUN_ZERO.py` are related to **LAD-SGNN**. Specifically, `RUN_FEW.py` and `RUN_ZERO.py` are used for few-shot and zero-shot experiments, and their usage is similar to **DST-SGNN**.)* 
 

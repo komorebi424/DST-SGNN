@@ -13,7 +13,7 @@ DST-SGNN efficiently forecasts spatio-temporal time series (STTS), capturing com
 **LAD-SGNN: LLM-Augmented Stiefel Graph Neural Networks**
 LAD-SGNN enhances DST-SGNN by integrating a lightweight large language model with structured prompts and a spatio-temporal alignment mechanism for unified structural and semantic modeling.
 
-Key highlights:
+**Key highlights**:
 
 Model design incorporates a thorough reorganization of spatiotemporal forecasting studies, including recent LLM-based approaches.
 

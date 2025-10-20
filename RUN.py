@@ -156,13 +156,10 @@ model = DSTSGNN(stride=args.stride, pre_length=args.pre_length, embed_size=args.
 total_params = sum(p.numel() for p in model.parameters())
 print(f"Total number of parameters: {total_params}")
 my_optim_large_model = torch.optim.Adagrad(params=model.parameters(), lr=0.01, lr_decay=0, weight_decay=0, initial_accumulator_value=0)
-my_optim_fgn_model1 = torch.optim.Adagrad(params=model.model1s.parameters(), lr=0.01, lr_decay=0, weight_decay=0, initial_accumulator_value=0)
-my_optim_fgn_model2 = torch.optim.Adagrad(params=model.model1t.parameters(), lr=0.01, lr_decay=0, weight_decay=0, initial_accumulator_value=0)
+
 
 my_lr_scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer=my_optim_large_model, gamma=args.decay_rate)
 
-my_lr_scheduler1 = torch.optim.lr_scheduler.ExponentialLR(optimizer=my_optim_fgn_model1, gamma=args.decay_rate)
-my_lr_scheduler2 = torch.optim.lr_scheduler.ExponentialLR(optimizer=my_optim_fgn_model2, gamma=args.decay_rate)
 
 forecast_loss = nn.L1Loss(reduction='mean').to(device)
 
@@ -263,20 +260,10 @@ if __name__ == '__main__':
             my_optim_large_model.step()
 
 
-            my_optim_fgn_model1.zero_grad()
-            loss.backward(retain_graph=True)
-            my_optim_fgn_model1.step()
-
-            my_optim_fgn_model2.zero_grad()
-            loss.backward(retain_graph=True)
-            my_optim_fgn_model2.step()
-
             loss_total += float(loss)
 
         if (epoch + 1) % args.exponential_decay_step == 0:
             my_lr_scheduler.step()
-            my_lr_scheduler1.step()
-            my_lr_scheduler2.step()
 
         if (epoch + 1) % args.validate_freq == 0:
             val_loss = validate(model, val_dataloader)

@@ -52,8 +52,8 @@ class DSTSGNN(nn.Module):
         F1 = F1.reshape(z1.shape[0], z1.shape[1], self.embed_size*12)
         F1 = F1.double()
         Y1 = self.fc1(F1)
-        Y1 = self.fc2(Y1.detach().clone()).double()
-        Y1 = self.fc3(Y1.detach().clone())
+        Y1 = self.fc2(Y1.clone()).double()
+        Y1 = self.fc3(Y1.clone())
 
         return Y1
 

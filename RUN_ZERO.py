@@ -3,7 +3,7 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
 from data.data_loader_L import Dataset_ECG, Dataset_CSI, Dataset_CSI_old
-from model.MODEL_L import LAD-SGNN
+from model.MODEL_L import LADSGNN
 import time
 import os
 import numpy as np
@@ -189,7 +189,7 @@ val_dataloader = DataLoader(
 )
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-model = LAD-SGNN(stride=args.stride, pre_length=args.pre_length, embed_size=args.embed_size,
+model = LADSGNN(stride=args.stride, pre_length=args.pre_length, embed_size=args.embed_size,
                feature_size=args.feature_size, seq_length=args.seq_length, hidden_size=args.hidden_size,
                patch_len=args.patch_len, d_model=args.d_model)
 total_params = sum(p.numel() for p in model.parameters())

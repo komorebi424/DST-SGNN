@@ -11,9 +11,9 @@ import transformers
 from peft import get_peft_config, PeftModel, PeftConfig, get_peft_model, LoraConfig, TaskType
 
 
-class LAD-SGNN(nn.Module):
+class LADSGNN(nn.Module):
     def __init__(self, stride, pre_length, embed_size, feature_size, seq_length, hidden_size, patch_len, d_model):
-        super(LAD-SGNN, self).__init__()
+        super(LADSGNN, self).__init__()
         self.max_len = 60
         self.embed_size = embed_size
         self.hidden_size = hidden_size

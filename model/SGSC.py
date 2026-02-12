@@ -62,11 +62,6 @@ class SGSC(nn.Module):
     def LDGOSM(self, x):
         E = F.relu(x)  
 
-        I = torch.eye(E.size(2), device=E.device) 
-        E_T_E = torch.matmul(E.transpose(1, 2), E)  
-        A = I + E_T_E  
-
-
         X_T_X = torch.matmul(x.transpose(1, 2), x)  
         eigenvalues, eigenvectors = torch.linalg.eigh(X_T_X) 
 
